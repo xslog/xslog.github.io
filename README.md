@@ -1,4 +1,4 @@
-[Hux Blog](https://huangxuan.me)
+[Kyle Blog](https://huangxuan.me)
 ================================
 
 > I never expect this becomes popular.
@@ -44,13 +44,13 @@ Other Resources
 
 Ports
 - [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+- [**React-SSR**](https://github.com/LucasIcarus/kylesblog.github.io/tree/ssr) by @LucasIcarus
 
 [Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
 - Out of date. Helps wanted for updating it on par with the main repo
 
 Translation
-- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
+- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/kylesblog.github.io/blob/master/_doc/README.zh.md)
 
 
 License
@@ -59,5 +59,5 @@ License
 Apache License 2.0.
 Copyright (c) 2015-present Huxpro
 
-Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+Kyle Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
 Copyright (c) 2013-2016 Blackrock Digital LLC.
