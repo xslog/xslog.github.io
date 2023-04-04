@@ -44,7 +44,8 @@ Other Resources
 
 Ports
 - [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/kylesblog.github.io/tree/ssr) by @LucasIcarus
+- [**React-SSR**](https://github.com/LucasIcarus/
+- kylesblog.github.io/tree/ssr) by @LucasIcarus
 
 [Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
 - Out of date. Helps wanted for updating it on par with the main repo
