@@ -1694,3 +1694,10 @@ img::-moz-selection {
 .no-scroll {
   overflow-y: hidden;
 }
+
+.sidebar-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
