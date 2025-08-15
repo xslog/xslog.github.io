@@ -4,7 +4,7 @@ subtitle: "Programming Language Foundations - Theory And Practice Of Automation 
 layout: post
 author: "Hux"
 header-style: text
-hidden: true
+hidden: false
 tags:
   - SF (软件基础)
   - PLF (编程语言基础)
