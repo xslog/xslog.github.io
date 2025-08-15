@@ -17,7 +17,7 @@ weibo_username: 6183169446
 zhihu_username: guohuixie
 github_username: kylesblog
 twitter_username: kyle
-facebook_username:  905528463@qq.com
+facebook_username:  xie905528463@gmail.com
 # linkedin_username:  kyle
 
 # Build settings
@@ -92,5 +92,10 @@ page-mathjax: false
 # Friends
 friends:
   [
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
+    { title: "mars", href: "https://v.douyin.com/PkDzVt5-N6o/" },
   ]
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
