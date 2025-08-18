@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: xie905528463@gmail.com
 description: "这里是 Kyle 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
 keyword: "Kyle, Kyle的博客, Kyle Blog, 博客, 个人网站, 互联网, Web, Java, 搜索, 营销, 后端, 设计"
-url: "https://kylesblog.github.io" # your host, for absolute URL
+url: "https://xslog.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
