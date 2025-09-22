@@ -1,28 +1,57 @@
-[Kyle Blog](https://huangxuan.me)
-================================
+# Kyle's Blog
 
-> I never expect this becomes popular.
+> 离开世界之前 一切都是过程
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/xslog/xslog.github.io)
+[![Jekyll](https://img.shields.io/badge/jekyll-4.3.4-blue.svg)](https://jekyllrb.com/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
+
+![Blog Preview](https://xslog.github.io/img/blog-desktop.jpg)
 
 
 [User Manual 👉](_doc/Manual.md)
 --------------------------------------------------
 
-### Getting Started
+## 🚀 快速开始
 
-1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
+### 环境要求
 
-2. Installed dependencies in the `Gemfile`:
+- [Ruby](https://www.ruby-lang.org/en/) 2.6.10+
+- [Bundler](https://bundler.io/) 1.17.2+
+- [Jekyll](https://jekyllrb.com/) 4.3.4+
 
-```sh
-$ bundle install 
+### 安装步骤
+
+1. **克隆仓库**
+```bash
+git clone https://github.com/xslog/xslog.github.io.git
+cd xslog.github.io
 ```
 
-3. Serve the website (`localhost:4000` by default):
+2. **安装依赖**
+```bash
+bundle install
+```
 
-```sh
-$ bundle exec jekyll serve  # alternatively, npm start
+3. **启动开发服务器**
+```bash
+bundle exec jekyll serve
+```
+
+4. **访问网站**
+打开浏览器访问 `http://localhost:4000`
+
+### 🔧 开发命令
+
+```bash
+# 启动开发服务器（带自动重载）
+bundle exec jekyll serve --livereload
+
+# 构建静态网站
+bundle exec jekyll build
+
+# 清理缓存并重新构建
+bundle exec jekyll clean && bundle exec jekyll build
 ```
 
 ### Development (Build From Source)

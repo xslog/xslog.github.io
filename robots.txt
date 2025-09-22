@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://xslog.github.io/sitemap.xml
+
+# Disallow admin pages
+Disallow: /admin/
+Disallow: /_admin/
+Disallow: /vendor/
+Disallow: /_site/

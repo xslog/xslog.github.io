@@ -17,3 +17,15 @@ gem 'jekyll-sass-converter', '~> 2.0'
 # 指定兼容的 gem 版本
 gem 'google-protobuf', '~> 3.21.0'
 gem 'ffi', '~> 1.15.0'
+
+# SEO 和性能优化插件
+gem 'jekyll-sitemap'
+gem 'jekyll-feed'
+gem 'jekyll-seo-tag'
+gem 'jekyll-compress-images'
+
+# 开发环境插件
+group :development do
+  gem 'jekyll-admin'
+  gem 'jekyll-watch'
+end

@@ -3,9 +3,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="{{ site.keyword }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keyword }}{% endif %}">
     <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
+    <meta name="author" content="{{ site.author | default: site.title }}">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="{{ site.language | default: 'zh-CN' }}">
 
     <!-- Open Graph -->
     <meta property="og:title"
@@ -43,17 +46,21 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="{{ '/css/bootstrap.min.css' | prepend: site.baseurl }}" as="style">
+    <link rel="preload" href="{{ '/css/hux-blog.min.css' | prepend: site.baseurl }}" as="style">
+    
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ " /css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | prepend: site.baseurl }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | prepend: site.baseurl }}"></noscript>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ " /css/hux-blog.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/hux-blog.min.css' | prepend: site.baseurl }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ '/css/hux-blog.min.css' | prepend: site.baseurl }}"></noscript>
 
-    <!-- Custom Fonts -->
-    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-        type="text/css">
+    <!-- Custom Fonts with fallback -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"></noscript>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -63,8 +70,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- ga & ba script hoook -->
-    <script></script>
+    <!-- SEO Meta Tags -->
+    {% include seo-meta.html %}
+
+    <!-- Analytics -->
+    {% include analytics.html %}
+
+    <!-- Performance Optimizations -->
+    {% include performance.html %}
 
     <!-- Google AdSense -->
     <script data-ad-client="ca-pub-6487568398225121" async

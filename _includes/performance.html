@@ -1,0 +1,63 @@
+<!-- Performance optimizations -->
+<script>
+// Preload critical resources
+function preloadCriticalResources() {
+  const criticalImages = [
+    '{{ site.sidebar-avatar | prepend: site.baseurl }}',
+    '{{ site.header-img | prepend: site.baseurl }}'
+  ];
+  
+  criticalImages.forEach(src => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+}
+
+// Lazy load images
+function lazyLoadImages() {
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+
+  images.forEach(img => imageObserver.observe(img));
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    preloadCriticalResources();
+    lazyLoadImages();
+  });
+} else {
+  preloadCriticalResources();
+  lazyLoadImages();
+}
+</script>
+
+<!-- Service Worker Registration -->
+{% if site.service-worker %}
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('SW registered: ', registration);
+      })
+      .catch(registrationError => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+</script>
+{% endif %}
