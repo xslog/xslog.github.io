@@ -7,7 +7,7 @@
 <meta name="twitter:creator" content="@{{ site.twitter_username }}">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.sidebar-avatar | prepend: site.url }}{% endif %}">
+<meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.sidebar-avatar | prepend: site.baseurl | prepend: '/' | prepend: site.url }}{% endif %}">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
     "url": "{{ site.url }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.sidebar-avatar | prepend: site.url }}"
+      "url": "{{ site.sidebar-avatar | prepend: site.baseurl | prepend: '/' | prepend: site.url }}"
     }
   }{% if page.layout == 'post' %},
   "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
