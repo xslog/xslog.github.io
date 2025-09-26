@@ -95,7 +95,7 @@ seo:
   name: "Kyle's Blog"
   description: "这里是 Kyle 的个人博客，与你一起发现更大的世界"
   url: "https://xslog.github.io"
-  image: "https://xslog.github.io/img/kyle/my-touxiang.jpg"
+  image: "https://xslog.github.io/img/kyle/panda.jpg"
   twitter:
     card: "summary_large_image"
     creator: "@kyle"
@@ -103,7 +103,7 @@ seo:
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "小灰灰的日常分享 <br>"
-sidebar-avatar: "img/kyle/my-touxiang.jpg" # 这里可以设置头像 use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: "img/kyle/panda.jpg" # 这里可以设置头像 use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
